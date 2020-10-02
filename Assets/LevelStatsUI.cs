@@ -12,8 +12,8 @@ public class LevelStatsUI : MonoBehaviour {
         set => levelName.text = value;
     }
 
-    public void Setup(Level level) {
-        LevelName = level.name;
-        percentBar.Percent = Random.Range(0f, 1f);
+    public void Setup(LevelTestingResult level) {
+        LevelName = level.level.name;
+        percentBar.Percent = level.score;
     }
 }

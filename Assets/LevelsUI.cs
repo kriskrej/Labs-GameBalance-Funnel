@@ -10,13 +10,13 @@ public class LevelsUI : MonoBehaviour {
         levelStatsUiPrefab.gameObject.SetActive(false);
     }
 
-    public void AddLevel(Level level) {
+    public void AddLevel(LevelTestingResult level) {
         var newLevel = Instantiate(levelStatsUiPrefab, transform);
         newLevel.gameObject.SetActive(true);
         newLevel.Setup(level);
     }
 
-    public void ShowLevels(List<Level> levels) {
+    public void ShowLevels(List<LevelTestingResult> levels) {
         foreach (var level in levels) {
             AddLevel(level);
         }

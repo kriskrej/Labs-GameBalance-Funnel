@@ -1,11 +1,12 @@
 using UnityEngine;
 
+[System.Serializable]
 public class Level {
     public string name;
-    public float difficulty01;
-    public float timeConsuming01;
-    public float fun01;
-    public float polished01;
+    [HideInInspector] public float difficulty01;
+    [HideInInspector] public float timeConsuming01;
+    [HideInInspector] public float fun01;
+    [HideInInspector] public float polished01;
 
     public static Level CreateRandom() {
         var lvl = new Level();
